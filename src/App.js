@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import HomeContainer from './containers/HomeContainer'
+import HeaderContainer from './containers/HeaderContainer'
+import Card from './components/Dnd';
+import { Container, Row, Col } from 'reactstrap';
+import Dnd from './components/Dnd';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <HeaderContainer />
+    <Container>
+    <Row>
+    <Col>  <HomeContainer/> </Col>
+    <Col></Col>
+    <Col>  <Dnd/>   </Col>
+    </Row>
+    </Container>
+  
+    
+    
     </div>
   );
 }
